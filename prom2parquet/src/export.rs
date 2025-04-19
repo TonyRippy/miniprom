@@ -151,8 +151,8 @@ impl driver::Exporter for ParquetExporter {
     }
 
     fn close(&mut self) {
-        // This is *seriously* hacky, but it's the only way to close the ArrowWriter 
-        // behind a mutable reference. 
+        // This is *seriously* hacky, but it's the only way to close the ArrowWriter
+        // behind a mutable reference.
         // TODO: Keep working on this, and try to find a better way to finalize writes at the end.
         let new_writer = match ArrowWriter::try_new(
             File::open("/dev/null").unwrap(),

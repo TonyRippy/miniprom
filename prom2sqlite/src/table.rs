@@ -36,7 +36,7 @@ impl TableExporter {
             info!("using stanchion from {}", stanchion);
             unsafe {
                 let _guard = LoadExtensionGuard::new(&connection)?;
-                connection.load_extension(stanchion, None)?;
+                connection.load_extension(stanchion, None::<&str>)?;
             }
         }
         connection.execute_batch(SCHEMA_SQL)?;

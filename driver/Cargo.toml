@@ -12,8 +12,8 @@ http-body-util = "0.1"
 hyper = { version = "1.2", features = ["client", "server", "http1"] }
 hyper-util = { version = "0.1", features = ["tokio"] }
 log = "0.4"
-pest = "2.7.9"
-pest_derive = "2.7.10"
+pest = "2.8.1"
+pest_derive = "2.8.1"
 prometheus = { version = "0.14.0", features = ["process"] }
 tokio = { version = "1", features = ["macros", "net", "rt", "signal", "time"] }
 
